@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz primer mes ♡</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.pantalla {
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px 22px;
+    animation: aparecer 0.8s ease;
+}
+
+.pantalla.activa {
+    display: flex;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenido {
+    width: 100%;
+    max-width: 750px;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.corazon {
+    font-size: 55px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+button {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 30px;
+    padding: 13px 28px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.04);
+}
+
+.galeria {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.foto {
+    width: 250px;
+    height: 300px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 0 20px rgba(255,255,255,0.08);
+    transition: 0.4s;
+}
+
+.foto:hover {
+    transform: scale(1.04) rotate(1deg);
+}
+
+.musica {
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.03);
+    margin: 20px 0;
+}
+
+.enlace {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+}
+
+.final {
+    max-width: 650px;
+}
+
+.pequeno {
+    font-size: 16px;
+    opacity: 0.75;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 31px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .foto {
+        width: 100%;
+        max-width: 280px;
+        height: 330px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PANTALLA 1 -->
+
+<section class="pantalla activa" id="pantalla1">
+
+    <div class="contenido">
+
+        <div class="corazon">♡</div>
+
+        <h1>Hola, mi príncipe</h1>
+
+        <p>
+            Siento que nada es suficiente para demostrarte mi amor,
+            entonces espero que esto al menos se acerque.
+            <br><br>
+            Por nuestro primer mes y todos los que vienen.
+        </p>
+
+        <button onclick="mostrar(2)">
+            Abrir mi regalo ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PANTALLA 2 -->
+
+<section class="pantalla" id="pantalla2">
+
+    <div class="contenido">
+
+        <div class="corazon">♡</div>
+
+        <p>
+            Iv, desde que llegaste a mi vida siento que todo tomó color,
+            me siento vivo de verdad.
+        </p>
+
+        <p>
+            Con todo y la obsesión, con todo lo que haya pasado,
+            siempre te amaré.
+        </p>
+
+        <p>
+            Recuerdo cómo nos conocimos a cada momento y cómo de feliz
+            me hizo sentir que las piezas encajaban al fin.
+        </p>
+
+        <button onclick="mostrar(3)">
+            Nuestros recuerdos ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PANTALLA 3 -->
+
+<section class="pantalla" id="pantalla3">
+
+    <div class="contenido">
+
+        <div class="corazon">♡</div>
+
+        <h2>Nuestros recuerdos</h2>
+
+        <p class="pequeno">
+            Algunos momentos que quiero guardar contigo.
+        </p>
+
+        <div class="galeria">
+
+            <img
+                class="foto"
+                src="8cd0d6b6d0adbe7ec55d619988334447.jpg"
+                alt="Nuestro recuerdo">
+
+            <img
+                class="foto"
+                src="9ddd97bf9b13bff7a297addf271c7143.jpg"
+                alt="Nuestro recuerdo">
+
+            <img
+                class="foto"
+                src="b645e2104f33e3c71387c6fb5b0cb32b.jpg"
+                alt="Nuestro recuerdo">
+
+        </div>
+
+        <br>
+
+        <button onclick="mostrar(4)">
+            Continuar ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PANTALLA 4 -->
+
+<section class="pantalla" id="pantalla4">
+
+    <div class="contenido">
+
+        <div class="corazon">♡</div>
+
+        <h2>Like You Do</h2>
+
+        <div class="musica">
+
+            <p>
+                Todo lo que siento por ti está en esta canción.
+            </p>
+
+            <a
+                class="enlace"
+                href="https://www.youtube.com/results?search_query=Joji+Like+You+Do"
+                target="_blank">
+                Escuchar “Like You Do” ♫
+            </a>
+
+        </div>
+
+        <button onclick="mostrar(5)">
+            Tengo algo más que decirte ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PANTALLA 5 -->
+
+<section class="pantalla" id="pantalla5">
+
+    <div class="contenido">
+
+        <div class="corazon">♡</div>
+
+        <h1>Hay algo más...</h1>
+
+        <button onclick="mostrar(6)">
+            Descúbrelo
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PANTALLA 6 -->
+
+<section class="pantalla" id="pantalla6">
+
+    <div class="contenido final">
+
+        <div class="corazon">♡</div>
+
+        <p>
+            Espero seguir siendo parte de tu vida mucho más tiempo.
+        </p>
+
+        <p>
+            Siempre te voy a elegir.
+        </p>
+
+        <h2>
+            Así que elige...
+            <br><br>
+            Elígeme también. ♡
+        </h2>
+
+        <p>
+            Feliz primer mes, mi príncipe.
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function mostrar(numero) {
+
+    document.querySelectorAll(".pantalla").forEach(function(pantalla) {
+        pantalla.classList.remove("activa");
+    });
+
+    document.getElementById("pantalla" + numero)
+        .classList.add("activa");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
