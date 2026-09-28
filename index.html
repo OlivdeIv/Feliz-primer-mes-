@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi príncipe ♡</title>
+
+<style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #050505;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PANTALLAS
+========================= */
+
+.pantalla {
+    min-height: 100vh;
+    width: 100%;
+
+    padding: 40px 25px;
+
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    animation: aparecer 1.2s ease;
+}
+
+.pantalla.activa {
+    display: flex;
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+h1 {
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+p {
+    max-width: 650px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #f2f2f2;
+}
+
+
+/* =========================
+   CORAZONES
+========================= */
+
+.corazon {
+    font-size: 75px;
+
+    color: white;
+
+    animation: latido 1.8s infinite;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.5),
+        0 0 30px rgba(255,255,255,0.2);
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+
+    margin-top: 30px;
+
+    padding: 15px 32px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 17px;
+
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+    backdrop-filter: blur(5px);
+}
+
+button:hover {
+
+    background: rgba(255,255,255,0.18);
+
+    transform: scale(1.07);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.2);
+}
+
+
+/* =========================
+   PANTALLA 1
+========================= */
+
+#pantalla1 {
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #242424 0%,
+        #101010 40%,
+        #050505 100%
+    );
+
+}
+
+
+/* =========================
+   PANTALLA 2
+========================= */
+
+#pantalla2 {
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #1c1c1c,
+        #080808 70%
+    );
+
+}
+
+
+/* =========================
+   PANTALLA 3
+========================= */
+
+#pantalla3 {
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #050505,
+        #171717,
+        #050505
+    );
+
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+
+.foto {
+
+    width: 250px;
+
+    height: 300px;
+
+    border-radius: 18px;
+
+    object-fit: cover;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.08);
+
+    transition: 0.4s;
+}
+
+
+.foto:hover {
+
+    transform:
+        scale(1.04)
+        rotate(1deg);
+
+}
+
+
+/* =========================
+   ESPACIOS PARA FOTOS
+========================= */
+
+.espacio-foto {
+
+    width: 250px;
+
+    height: 300px;
+
+    border-radius: 18px;
+
+    border: 1px dashed rgba(255,255,255,0.35);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 50px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,0.03);
+}
+
+
+/* =========================
+   PANTALLA 4
+========================= */
+
+#pantalla4 {
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #202020,
+        #050505
+    );
+
+}
+
+
+/* =========================
+   BOTÓN DE CANCIÓN
+========================= */
+
+.cancion {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 17px 35px;
+
+    border-radius: 35px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.4s;
+}
+
+
+.cancion:hover {
+
+    transform: scale(1.07);
+
+    background:
+        rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.2);
+}
+
+
+/* =========================
+   PANTALLA 5
+========================= */
+
+#pantalla5 {
+
+    background: #030303;
+
+}
+
+
+.mensaje-secreto {
+
+    font-size: 27px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================
+   PANTALLA FINAL
+========================= */
+
+#pantalla6 {
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #222222,
+        #080808 65%,
+        #030303
+    );
+
+}
+
+
+.final {
+
+    max-width: 700px;
+
+}
+
+
+.final p {
+
+    font-size: 22px;
+
+}
+
+
+.final-corazon {
+
+    font-size: 85px;
+
+    color: white;
+
+    animation: latido 1.8s infinite;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,0.5),
+        0 0 40px rgba(255,255,255,0.2);
+
+}
+
+
+/* =========================
